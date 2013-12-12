@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Basic JS Animation</title>
+</head>
+<style type="text/css">
+#element {
+  background-color: #F00;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+</style>
+<script type="text/javascript">
+var schritt = 0;
+function animation() {
+ schritt += 10;
+ document.getElementById("element").style.left = schritt + "px";
+ window.setTimeout(animation, 1000/60);
+}
+window.onload = function (argument) {
+  document.getElementById('start').onclick = animation;
+}
+
+</script>
+<body>
+  <a href="#" id="start">Start animation</a>
+  <div id="element"></div>
+
+</body>
+</html>

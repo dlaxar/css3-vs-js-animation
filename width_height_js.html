@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>Task: Change the width, then height with JS</title>
+</head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.js"></script>
+<style type="text/css">
+  #element {
+    background-color: #F00;
+    width: 100px;
+    height: 100px;
+  }
+
+</style>
+<script type="text/javascript">
+$(function onDomReady () {
+  $('#start').click(function () {
+    $('#element').animate({"width": '200px'}, 1000, 'linear').animate({"height": '200px'}, 1000, 'linear');
+
+    // or for promise lovers
+    
+    // $('#element').animate({"width": '200px'}, 1000, 'linear').promise().then(function () {
+    //   this.animate({"height": '200px'}, 1000, 'linear');
+    // });
+
+  })
+});
+</script>
+<body>
+
+  <div id="element"></div>
+  <a href="#element" id="start">Start animation</a>
+  
+
+</body>
+</html>

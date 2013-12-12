@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Animations using JS - Concept</title>
+</head>
+<style type="text/css">
+  #animated {
+    background-color: #F00;
+    width: 100px;
+    height: 100px;
+  }
+
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.js"></script>
+<script type="text/javascript">
+  $(function onDomReady () {
+    $('#start').click(function () {
+      $('#animated').animate({"width": '200px'}, 5000, 'linear');
+    })
+  })
+  
+</script>
+<body>
+  <p>To see the animations in action open your Inspector and watch the style attribute of the box below (div#animated)</p>
+  <a href="#" id="start">Start Animation using JS (duration: 5000ms)</a>
+  <div id="animated"></div>
+
+</body>
+</html>

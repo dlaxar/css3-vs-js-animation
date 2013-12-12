@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Task: Jump on hover - JS</title>
+</head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.js"></script>
+<style type="text/css">
+  #element {
+    background-color: #F00;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-top: 200px;
+  }
+
+</style>
+<script type="text/javascript">
+$(function onDomReady () {
+  $('#element').hover(function () {
+    $('#element')
+      .animate({"bottom": '20px'}, 250, 'linear')
+      .animate({"bottom": '0px'}, 250, 'linear')
+      .animate({"bottom": '10px'}, 125, 'linear')
+      .animate({"bottom": '0px'}, 125, 'linear')
+  }, function () {});
+});
+</script>
+<body>
+
+  <div id="element"></div>
+</body>
+</html>
